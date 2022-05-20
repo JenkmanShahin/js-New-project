@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    background-size: 1500px;
 }
 #container {
     opacity: 85%;

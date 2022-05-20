@@ -26,7 +26,7 @@ class ShoppingList extends React.Component {
 
   render() {
     let nochZuKaufen = []
-    for (const gruppe of App.gruppenListe) {
+    for (const gruppe of App.gruppenListe){
       nochZuKaufen.push(<GruppenTag
         key={gruppe.id}
         gruppe={gruppe}
