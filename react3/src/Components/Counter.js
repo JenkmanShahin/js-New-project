@@ -9,7 +9,6 @@ class Counter extends React.Component{
         }
     }
 
-
     increaseCounter = () => {
         /*ToDO: Erhöhe hier den aktuellen state von counter um +1 */
         this.setState({counter : this.state.counter +1})

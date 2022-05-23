@@ -8,7 +8,6 @@ class UnlikeButton extends React.Component{
         liked : false
       }
     }
-
     render = () => {
         if (this.state.liked) {
             return (
