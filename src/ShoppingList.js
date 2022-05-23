@@ -38,22 +38,26 @@ class ShoppingList extends React.Component {
 
   erledigtAufZuKlappen() {
   // ToDo: fertig programmieren
+    let neuerZustand = !this.state.erledigtAufZuKlappen
+    this.setState({erledigtAufZuKlappen : neuerZustand})
   }
 
-  render() {
-    let nochZuKaufen = []
-    if (this.state.einkaufenAufgeklappt == true) {
-      for (const gruppe of App.gruppenListe) {
-        nochZuKaufen.push(<GruppenTag
-          key={gruppe.id}
-          gruppe={gruppe}
-          gekauft={false}/>)
-      }
+  render () {
+  let nochZuKaufen = []
+  if (this.state.einkaufenAufgeklappt == true) {
+    for (const gruppe of App.gruppenListe) {
+      nochZuKaufen.push(<GruppenTag
+        key={gruppe.id}
+        gruppe={gruppe}
+        gekauft={false}/>)
     }
+  }
+
 
 
     let schonGekauft = []
     // ToDo: Bedingung  mit 'erledigtAufgeklappt' programmieren
+  if (this.state.erledigtAufZuKlappen)
     for (const gruppe of App.gruppenListe) {
       schonGekauft.push(<GruppenTag
         key={gruppe.id}
@@ -82,7 +86,7 @@ class ShoppingList extends React.Component {
           <section>
             <h2>Noch zu kaufen
               <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
-                {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
+                {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
             </h2>
             <dl>
@@ -93,8 +97,8 @@ class ShoppingList extends React.Component {
           <section>
             <h2>Schon gekauft
               {/* ToDo: füge hier drunter Deinen Code ein */}
-              <i className="material-icons">
-                expand_less
+              <i onClick={() => this.erledigtAufZuKlappen()} className="material-icons">
+                {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
             </h2>
             <dl>
