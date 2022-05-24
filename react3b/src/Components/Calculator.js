@@ -33,6 +33,7 @@ class Calculator extends React.Component {
             fahrenheit = tryConvert(temperature, toFahrenheit)
         }
 
+
         return (
             <div>
                 <TemperatureInput
