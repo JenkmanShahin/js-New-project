@@ -59,13 +59,20 @@ class App extends React.Component {
     // 'state' aktualisieren
     this.setState(this.state)
   }
+  // another way:
+  //artikel.gekauft = !artikel.gekauft
+  //const aktion = (artikel.gekauft) ? "erledigt" : "unerledigt"
+  //Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
+  //this.setState(this.state)
+
+
 
   artikelHinzufuegen() {
     // ToDo: implementiere diese Methode
     let eingabe = document.getElementById("artikelEingabe")
-    if (eingabe.value.length > 0) {
+    if (eingabe.value.trim().length > 0) {
       Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
-      this.setState(this.state)
+      this.setState(this.state)   // wird immer in React benutzt
     }
     eingabe.value = ""
     eingabe.focus()
