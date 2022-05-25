@@ -40,18 +40,25 @@ class App extends React.Component {
     // ToDo: fertig programmieren
     let neuerZustand = !this.state.erledigtAufgeklappt
     this.setState({erledigtAufgeklappt: neuerZustand})
+    this.setState({erledigtAufgeklappt: !this.state.erledigtAufgeklappt})
   }
 
-  // ToDo: diese Methode als 'checkHandler' an GruppenTag und ArtikelTag durchreichen
   artikelChecken = (artikel) => {
+    // ToDo: implementiere diese Methode
     // artikel.gekauft 'umpolen'
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
     // App.informieren mit 'aktion'
     // 'state' aktualisieren
   }
 
+  artikelHinzufuegen() {
+    // ToDo: implementiere diese Methode
+  }
+
   setAktiveGruppe(gruppe) {
-    // ToDo:
+    Modell.aktiveGruppe = gruppe
+    Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
+    this.setState({aktiveGruppe: Modell.aktiveGruppe})
   }
 
   render() {
@@ -62,36 +69,40 @@ class App extends React.Component {
           key={gruppe.id}
           gruppe={gruppe}
           gekauft={false}
-          aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}/>)
+          aktiv={gruppe == this.state.aktiveGruppe}
+          aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
+          checkHandler={this.artikelChecken}/>)
       }
     }
 
 
     let schonGekauft = []
-    // ToDo: Bedingung  mit 'erledigtAufgeklappt' programmieren
-    if (this.state.erledigtAufgeklappt == true) {
+    if (this.state.erledigtAufgeklappt) {
       for (const gruppe of Modell.gruppenListe) {
         schonGekauft.push(<GruppenTag
           key={gruppe.id}
           gruppe={gruppe}
-          gekauft={true}/>)
+          gekauft={true}
+          aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
+          checkHandler={this.artikelChecken}/>)
       }
     }
 
     return (
       <div id="container">
-        {/* ToDo: füge hier drunter Deinen HTML-Code ein */}
         <header>
           <h1>Watchlist</h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>
             <input className="mdc-text-field__input" type="search"
-                   id="artikelEingabe" placeholder="Artikel hinzufügen"/>
-            <i className="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
-               role="button">add_circle</i>
+                   id="artikelEingabe" placeholder="Artikel hinzufügen"
+                   onKeyPress={e => (e.key == 'Enter') ? this.artikelHinzufuegen() : ''}/>
             <span className="mdc-line-ripple"></span>
+            <i className="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
+               onClick={() => this.artikelHinzufuegen()}>add_circle</i>
           </label>
+
         </header>
         <hr/>
 
