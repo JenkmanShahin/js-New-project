@@ -58,13 +58,6 @@ class App extends React.Component {
     }
     eingabe.value = ""
     eingabe.focus()
-    let eingabe = document.getElementById("artikelEingabe")
-    if (eingabe.value.trim().length > 0) {
-      Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
-      this.setState(this.state)   // wird immer in React benutzt
-    }
-    eingabe.value = ""
-    eingabe.focus()
   }
 
   setAktiveGruppe(gruppe) {
