@@ -130,6 +130,7 @@ class App extends React.Component {
         </header>
         <hr/>
 
+
         <main>
           <section>
             <h2>Noch zu kaufen
