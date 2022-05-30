@@ -7,6 +7,7 @@ class PartyLock extends React.Component{
          this.label = this.props.locked ? "Name is locked" : "Name is not locked"
     }
 
+
     render() {
         return (
             /*  Aufgabe 5
