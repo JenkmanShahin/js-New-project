@@ -37,38 +37,27 @@ class App extends React.Component {
   }
 
   erledigtAufZuKlappen() {
-    // ToDo: fertig programmieren
-    let neuerZustand = !this.state.erledigtAufgeklappt
-    this.setState({erledigtAufgeklappt: neuerZustand})
     this.setState({erledigtAufgeklappt: !this.state.erledigtAufgeklappt})
   }
 
   artikelChecken = (artikel) => {
     // ToDo: implementiere diese Methode
     // artikel.gekauft 'umpolen'
-    artikel.gekauft = !artikel.gekauft
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
-    let aktion
-    if (artikel.gekauft == true) {
-      aktion = "erledigt"
-    } else {
-      aktion = "unerledigt"
-    }
     // App.informieren mit 'aktion'
-    Modell.informieren(`${artikel.name} "ist" ${aktion}`)
     // 'state' aktualisieren
-    this.setState(this.state)
   }
-  // another way:
-  //artikel.gekauft = !artikel.gekauft
-  //const aktion = (artikel.gekauft) ? "erledigt" : "unerledigt"
-  //Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
-  //this.setState(this.state)
-
-
 
   artikelHinzufuegen() {
     // ToDo: implementiere diese Methode
+    const eingabe = document.getElementById("artikelEingabe")
+    const artikelName = eingabe.value.trim()
+    if (artikelName.length > 0) {
+      Modell.aktiveGruppe.artikelHinzufuegen(artikelName)
+      this.setState(this.state)
+    }
+    eingabe.value = ""
+    eingabe.focus()
     let eingabe = document.getElementById("artikelEingabe")
     if (eingabe.value.trim().length > 0) {
       Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
@@ -109,6 +98,13 @@ class App extends React.Component {
           aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
           checkHandler={this.artikelChecken}/>)
       }
+    }
+
+    let gruppenDialog = ""
+    if (this.state.showGruppenDialog) {
+      gruppenDialog = <GruppenDialog
+        gruppenListe={Modell.gruppenListe}
+        onDialogClose={() => this.setState({showGruppenDialog: false})}/>
     }
 
     return (
@@ -171,6 +167,8 @@ class App extends React.Component {
             <span className="mdc-button__ripple"></span> Setup
           </button>
         </footer>
+
+        {gruppenDialog}
       </div>
     )
   }
