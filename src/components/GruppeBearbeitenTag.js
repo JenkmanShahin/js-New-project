@@ -11,6 +11,7 @@ class GruppeBearbeitenTag extends React.Component {
 
   handleChange(event) {
     // ToDo: implementieren
+
   }
 
   gruppeUmbenennen(gruppe, event) {
