@@ -1,6 +1,7 @@
 import React from 'react'
 import GruppenTag from './components/GruppenTag'
 import Modell from './model/Shopping'
+import GruppenDialog from './components/GruppenDialog'
 
 
 class App extends React.Component {
@@ -147,7 +148,8 @@ class App extends React.Component {
         <hr/>
 
         <footer>
-          <button className="mdc-button mdc-button--raised">
+          <button className="mdc-button mdc-button--raised"
+          onClick={() => this.setState({showGruppenDialog: true})}>
             <span className="material-icons">bookmark_add</span>
             <span className="mdc-button__ripple"></span> Gruppen
           </button>
