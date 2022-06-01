@@ -18,7 +18,7 @@ class GruppeBearbeitenTag extends React.Component {
   gruppeUmbenennen(gruppe, event) {
     if (event && event.key != "Enter") return
     // ToDo: implementieren
-    this.props.gruppe.name = this.state.newName
+    gruppe.name = this.state.newName
     this.setState({isEditing: false})
   }
 
