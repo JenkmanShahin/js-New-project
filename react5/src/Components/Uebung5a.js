@@ -122,6 +122,7 @@ export const messages = ['React', 'Re: React', 'Re:Re: React'];
  * 4) Benutze ? und : in deiner render Funktion.
  */
 
+
 export class NutzerGruessung extends React.Component {
   constructor(props) {
     super(props);
