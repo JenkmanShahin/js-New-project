@@ -15,7 +15,7 @@ class GruppenTag extends React.Component {
     this.forceUpdate()
   }
 
-  aufZuklappen() {
+  aufZuKlappen() {
     this.setState({aufgeklappt: !this.state.aufgeklappt})
   }
 
@@ -29,23 +29,24 @@ class GruppenTag extends React.Component {
             onClick={() => this.props.aktiveGruppeHandler(gruppe)}>
           <span>{gruppe.name}</span>
           <i className="material-icons"
-          onClick={() => this.aufZuklappen()}>
+             onClick={() => this.aufZuKlappen()}>
             {this.state.aufgeklappt ? 'expand_more' : 'expand_less'}
           </i>
         </dt>)
     }
 
     let artikelArray = []
-    if (this.state.aufgeklappt){
-    for (const artikel of gruppe.artikelListe) {
-      if (artikel.gekauft == this.props.gekauft) {
-        artikelArray.push(
-          <ArtikelTag artikel={artikel} key={artikel.id}
-                      checkHandler={this.props.checkHandler}
-                      deleteHandler={() => this.artikelEntfernen(artikel.name)}/>)
+    if (this.state.aufgeklappt) {
+      for (const artikel of gruppe.artikelListe) {
+        if (artikel.gekauft == this.props.gekauft) {
+          artikelArray.push(
+            <ArtikelTag artikel={artikel} key={artikel.id}
+                        checkHandler={this.props.checkHandler}
+                        deleteHandler={() => this.artikelEntfernen(artikel.name)}/>)
+        }
       }
     }
-    }
+
     return (
       <React.Fragment>
         {gruppenHeader}
