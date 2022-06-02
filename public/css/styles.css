@@ -14,7 +14,11 @@
     --mdc-theme-secondary: #380c0c;
 }
 h1 {
-    font-family: ;
+    color: #ffffff;
+    align-self: center;
+    font-family: Crackvetica;
+    padding: 35px 0 5px 25%;
+    font-size: 35px;
 }
 dt {
     background-color: #a9590d;
