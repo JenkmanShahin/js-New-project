@@ -14,7 +14,6 @@ import SortierDialog from "./components/SortierDialog";
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.initialisieren()
     this.state = {
       aktiveGruppe: null,
       showGruppenDialog: false,
@@ -69,6 +68,10 @@ class App extends React.Component {
     this.setState(this.state)
   }
 
+
+  /**
+   * Fügt einen Artikel hinzu
+   */
   artikelHinzufuegen() {
     const eingabe = document.getElementById("artikelEingabe")
     const artikelName = eingabe.value.trim()
@@ -80,11 +83,22 @@ class App extends React.Component {
     eingabe.focus()
   }
 
+  /**
+   * Markiert die aktive Gruppe farbig und fügt nur in der aktive Gruppe artikel hinzu
+   * @param {gruppe} gruppe - Die aktuelle Gruppe wird als aktive Gruppe gesetzt
+   */
+
   setAktiveGruppe(gruppe) {
     Modell.aktiveGruppe = gruppe
     Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
     this.setState({aktiveGruppe: Modell.aktiveGruppe})
   }
+
+  /**
+   * schließt den SortiereDialog
+   * @param {reihnfolge} reihenfolge - Die aktuelle reihenfolge wird ausgegeben
+   * @param {sortieren} sortieren - und gibt sie sortiert aus
+   */
 
   closeSortierDialog = (reihenfolge, sortieren) => {
     if (sortieren) {

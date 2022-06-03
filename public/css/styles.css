@@ -1,6 +1,6 @@
 #root {
     width: 23rem;
-    background-image: url("../img/threema-20200121-132930-185a1810abe86ead.jpg");
+    background-image: url("../img/1200714.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
@@ -14,14 +14,18 @@
     --mdc-theme-secondary: #380c0c;
 }
 h1 {
+    margin: 1px;
+    text-align: center;
     color: #020201;
-    align-self: center;
+    letter-spacing: 6px;
     font-family: "Grease";
-    padding: 35px 0 5px 25%;
-    font-size: 40px;
-    text-shadow: 5px 0 #3f3fbe;
-    -webkit-text-fill-color: black;
-
+    padding: 15px ;
+    font-size: 30px;
+    text-shadow: 5px 0 #058b00;
+    transition: text-shadow 200ms;
+}
+h1:hover{
+    text-shadow: #6c49af 6px 0, red 6px 0 ;
 }
 dt {
     background-color: #047939;
@@ -134,9 +138,17 @@ footer {
     -webkit-font-smoothing: antialiased;
 }
 
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: green;
+.mdc-text-field:not(.mdc-text-field--disabled){
+    color: rgb(9, 7, 7);
 }
+
+
+
+
+
+
+
+
 
 
 
