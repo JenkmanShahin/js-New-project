@@ -1,27 +1,30 @@
 #root {
     width: 23rem;
-    background-image: url("../img/markt.jpg");
+    background-image: url("../img/threema-20200121-132930-185a1810abe86ead.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
-    background-size: 1500px;
+    background-attachment: inherit;
+    background-size: 450px;
 }
 #container {
-    opacity: 85%;
+    opacity: 95%;
 }
 :root {
-    --mdc-theme-primary: #4b0606;
+    --mdc-theme-primary: #047939;
     --mdc-theme-secondary: #380c0c;
 }
 h1 {
-    color: #ffffff;
+    color: #020201;
     align-self: center;
-    font-family: Crackvetica;
+    font-family: "Grease";
     padding: 35px 0 5px 25%;
-    font-size: 35px;
+    font-size: 40px;
+    text-shadow: 5px 0 #3f3fbe;
+    -webkit-text-fill-color: black;
+
 }
 dt {
-    background-color: #a9590d;
+    background-color: #047939;
     color: var(--mdc-theme-on-primary);
 
 }
@@ -30,7 +33,7 @@ h2, dd {
 
 }
 
-.aktiv { background-color: #5d8f86
+.aktiv { background-color: #047939
 }
 .inaktiv { background-color: #4266b3
 }
@@ -90,7 +93,7 @@ dd label input[type="checkbox"] {
     margin: 6px 6px;
 }
 dd input[type="search"] {
-    margin-left: 1.5rem;
+    margin-left: 1.3rem;
 }
 .mdc-text-field {
     height: 2rem;
@@ -103,6 +106,8 @@ label {
 footer {
     display: flex;
     justify-content: space-between;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .mdc-dialog {
@@ -128,7 +133,12 @@ footer {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
-.ncd-dialog__surface {
 
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: green;
 }
+
+
+
+
 

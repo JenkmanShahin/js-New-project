@@ -115,7 +115,7 @@ class App extends React.Component {
     return (
       <div id="container">
         <header>
-          <h1>Watchlist</h1>
+          <h1>Reading list</h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>
@@ -169,7 +169,7 @@ class App extends React.Component {
           </button>
           <button className="mdc-button mdc-button--raised">
             <span className="material-icons">settings</span>
-            <span className="mdc-button__ripple"></span> Setup
+            <span  className="mdc-button__ripple"></span> Setup
           </button>
         </footer>
 
