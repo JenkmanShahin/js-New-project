@@ -19,7 +19,7 @@ h1 {
     color: #020201;
     letter-spacing: 6px;
     font-family: "Grease";
-    padding: 15px ;
+    padding: 10px ;
     font-size: 30px;
     text-shadow: 5px 0 #058b00;
     transition: text-shadow 200ms;
@@ -43,13 +43,12 @@ h2, dd {
 }
 h1, h2, dl {
     margin: 0;
-
-
 }
 h2 {
-    padding: 0 0 10px 0;
+    padding: 10px 0 10px 15px;
     margin-left: 5%;
     margin-right: 5%;
+    border-radius: 15px;
 
 }
 i.material-icons {
@@ -102,6 +101,7 @@ dd input[type="search"] {
 }
 .mdc-text-field {
     height: 2rem;
+    margin: 12px;
 }
 
 label {
@@ -137,6 +137,10 @@ footer {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+}
+.mdc-text-field{
+    margin-left: 5%;
+    border-radius: 5px;
 }
 
 
