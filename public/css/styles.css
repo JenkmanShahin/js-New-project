@@ -98,6 +98,7 @@ dd label input[type="checkbox"] {
 }
 dd input[type="search"] {
     margin-left: 1.3rem;
+    margin-right: 1.3rem;
 }
 .mdc-text-field {
     height: 2rem;
@@ -138,9 +139,6 @@ footer {
     -webkit-font-smoothing: antialiased;
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled){
-    color: rgb(9, 7, 7);
-}
 
 
 

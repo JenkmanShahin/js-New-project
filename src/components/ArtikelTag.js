@@ -38,7 +38,10 @@ class ArtikelTag extends React.Component {
       artikelName = <s>{artikel.name}</s>
     }
 
-    // erlaubt das abhaken und reaktivieren
+    /**
+     * erlaubt das abhaken und reaktivieren
+     * @type {JSX.Element}
+     */
     const viewTemplate = (
       <dd>
         <label>

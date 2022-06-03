@@ -27,7 +27,7 @@ class GruppenTag extends React.Component {
 
   /**
    * Entfernt den Artikel
-   * @param {name} name - Name des Ausgewählten Artikel
+   * @param {name} name - entfernt Name des Artikels
    */
   artikelEntfernen(name) {
     this.props.gruppe.artikelEntfernen(name)
