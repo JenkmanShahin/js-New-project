@@ -1,6 +1,6 @@
 #root {
     width: 23rem;
-    background-image: url("../img/original.jpeg");
+    background-image: url("../img/images.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
@@ -12,52 +12,68 @@
     opacity: 75%;
 }
 :root {
-    --mdc-theme-primary: #eaefeb;
-    --mdc-theme-secondary: #380c0c;
+    --mdc-theme-primary: #181e19;
+    --mdc-theme-secondary: #d9cece;
 }
 h1 {
     margin: 1px;
     text-align: center;
     color: #faf7f7;
     letter-spacing: 6px;
-    font-family: "Grease";
+    font-family: "Ribbon";
     padding: 10px ;
     font-size: 30px;
-    text-shadow: 5px 0 #383434;
+    text-shadow: 5px 0 #918b8b;
     transition: text-shadow 200ms;
 }
 h1:hover{
-    text-shadow: #090707 6px 0, #020101 6px 0 ;
+    text-shadow: #020101 6px 0, #070707 6px 0 ;
 }
 dt {
-    background-color: rgb(255, 153, 102);
+    background-color: rgb(12, 11, 11);
     color: var(--mdc-theme-on-primary);
 
 }
 h2, dd {
     background-color: var(--mdc-theme-on-primary);
+    font-family: "Ribbon";
+    
 
 
 }
 
-.aktiv { background-color: rgba(247, 174, 97, 0.8)
+.mdc-button .mdc-button__label {
+    position: relative;
+    background-color: #030505;
+    font-family: 'Ribbon';
+    padding: 10px 10px 10px 10px;
+    color: #ded9d9;
+
+
+
 }
-.inaktiv { background-color: #80391e
+
+.aktiv { background-color: rgb(217, 216, 207)
+}
+.inaktiv { background-color: #090707
 }
 h1, h2, dl {
     margin: 0;
 }
 h2 {
     padding: 10px 0 10px 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 5px;
+    color: #0f1111;
+    font-optical-sizing: auto;
 
 }
 i.material-icons {
     cursor: pointer;
     float: right;
     size: 20px;
+    color: #c97e1f;
 }
 button.material-icons {
     font-size: inherit;
@@ -75,14 +91,16 @@ dt {
     margin-right: 5px;
     margin-left: 5px;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 dt span {
     width: 100%;
-    margin-left: 5%;
+    margin-left: 1%;
+    color: #c97e1f;
 
 }
+
 dt, dd {
     height: 2rem;
     font-size: 1.2rem;
@@ -95,6 +113,7 @@ dd label {
     padding: 3px 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #0f110f;
 }
 dd label input[type="checkbox"] {
     margin: 6px 6px;
@@ -127,6 +146,13 @@ footer {
     top: 10%;
     left: 25px;
 }
+h2.mdc-dialog__title{
+    color: #ffffff;
+    font-family: "Ribbon";
+}
+
+
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -142,6 +168,18 @@ footer {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
+
+.mdc-button--raised:not(:disabled) {
+    background-color: #030505;
+    font-family: 'Ribbon';
+
+}
+
+#my-dialog__title{
+    font-family: Ribbon;
+    color: #090808;
+}
+
 
 
 
