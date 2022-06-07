@@ -170,7 +170,7 @@ class App extends React.Component {
 
         <main>
           <section>
-            <h2>Noch zu kaufen
+            <h2>Noch zu lesen
               <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
                 {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
@@ -181,7 +181,7 @@ class App extends React.Component {
           </section>
           <hr/>
           <section>
-            <h2>Schon gekauft
+            <h2>Schon gelesen
               <i onClick={() => this.erledigtAufZuKlappen()} className="material-icons">
                 {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>

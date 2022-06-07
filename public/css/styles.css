@@ -1,45 +1,48 @@
 #root {
     width: 23rem;
-    background-image: url("../img/1200714.jpeg");
+    background-image: url("../img/original.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
-    background-size: 450px;
+    background-size: 400px;
+
+
 }
 #container {
-    opacity: 95%;
+    opacity: 75%;
 }
 :root {
-    --mdc-theme-primary: #047939;
+    --mdc-theme-primary: #eaefeb;
     --mdc-theme-secondary: #380c0c;
 }
 h1 {
     margin: 1px;
     text-align: center;
-    color: #020201;
+    color: #faf7f7;
     letter-spacing: 6px;
     font-family: "Grease";
     padding: 10px ;
     font-size: 30px;
-    text-shadow: 5px 0 #058b00;
+    text-shadow: 5px 0 #383434;
     transition: text-shadow 200ms;
 }
 h1:hover{
-    text-shadow: #6c49af 6px 0, red 6px 0 ;
+    text-shadow: #090707 6px 0, #020101 6px 0 ;
 }
 dt {
-    background-color: #047939;
+    background-color: rgb(255, 153, 102);
     color: var(--mdc-theme-on-primary);
 
 }
 h2, dd {
     background-color: var(--mdc-theme-on-primary);
 
+
 }
 
-.aktiv { background-color: #047939
+.aktiv { background-color: rgba(247, 174, 97, 0.8)
 }
-.inaktiv { background-color: #4266b3
+.inaktiv { background-color: #80391e
 }
 h1, h2, dl {
     margin: 0;
@@ -54,6 +57,7 @@ h2 {
 i.material-icons {
     cursor: pointer;
     float: right;
+    size: 20px;
 }
 button.material-icons {
     font-size: inherit;
@@ -138,10 +142,11 @@ footer {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
-.mdc-text-field{
-    margin-left: 5%;
-    border-radius: 5px;
-}
+
+
+
+
+
 
 
 
